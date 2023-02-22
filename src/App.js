@@ -8,6 +8,22 @@ const App = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (!content) return;
+
+    const newTodo = {
+      id: Math.floor(Math.random() * 2836873264),
+      content,
+      isCompleted: false,
+    };
+
+    dispatch({
+      type: 'ADD_TODO',
+      payload: newTodo,
+    });
+
+    setContent( ' ' );
+
   }
   return (
     <div className="container">
