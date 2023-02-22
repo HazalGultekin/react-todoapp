@@ -1,6 +1,11 @@
 export const initialState = {
-    todos: []
-};
+    todos: [
+      {
+        id: 0,
+        content: 'Ben ilk todoyum',
+      },     
+    ],
+ };
 
 const reducer = (state, action) => {
     console.log(action)
